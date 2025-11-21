@@ -1,17 +1,34 @@
 # utsmobile
 
-A new Flutter project.
+1. Jelaskan perbedaan antara Cubit dan Bloc dalam aksitektur flutter
+BLoC: pakai event → state. UI kirim event, BLoC proses, baru emit state. Cocok untuk aplikasi kompleks.
+Cubit: langsung method → state. UI panggil method, langsung emit state. Cocok untuk fitur sederhana.
 
-## Getting Started
+2. Mengapa penting untuk memisahkan antara model data, logika bisnis, dan UI dalam pengembangan aplikasi Flutter?
+Maintainability (Mudah Dikelola)
+Setiap bagian punya tanggung jawab jelas → gampang diperbaiki atau ditingkatkan tanpa merusak bagian lain.
+Contoh: Mengubah cara perhitungan tidak akan merusak tampilan UI.
 
-This project is a starting point for a Flutter application.
+Reusability (Bisa Digunakan Kembali)
+Model data dan logika bisnis bisa dipakai di layar lain atau proyek lain tanpa menulis ulang UI.
 
-A few resources to get you started if this is your first Flutter project:
+Testability (Mudah Dites)
+Logika bisnis bisa diuji unit test tanpa perlu menampilkan UI.
+UI bisa diuji terpisah dari data.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Scalability (Mudah Dikembangkan)
+Aplikasi besar lebih mudah dikembangkan karena tiap layer terpisah.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# UTS_MOBILE2
+3. Sebutkan dan jelaskan minimal tiga state yang mungkin digunakan dalam CartCubit beserta fungsinya.
+CartInitial
+Fungsi: Menandakan keranjang masih kosong atau belum ada interaksi.
+Biasanya state awal saat Cubit dibuat.
+
+CartUpdated
+Fungsi: Menandakan isi keranjang berubah, misal ada item ditambahkan atau dihapus.
+Bisa membawa data terbaru berupa list item dan total harga.
+
+CartError
+Fungsi: Menandakan terjadi kesalahan saat memodifikasi keranjang, misal gagal menambah item karena stok habis.
+
+Bisa membawa pesan error agar UI menampilkan notifikasi.
