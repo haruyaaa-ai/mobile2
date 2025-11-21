@@ -16,16 +16,13 @@ Cubit: langsung method → state. UI panggil method, langsung emit state. Cocok 
 4. Scalability (Mudah Dikembangkan)
    Aplikasi besar lebih mudah dikembangkan karena tiap layer terpisah.
 
-3. Sebutkan dan jelaskan minimal tiga state yang mungkin digunakan dalam CartCubit beserta fungsinya.
-CartInitial
-Fungsi: Menandakan keranjang masih kosong atau belum ada interaksi.
-Biasanya state awal saat Cubit dibuat.
-
-CartUpdated
-Fungsi: Menandakan isi keranjang berubah, misal ada item ditambahkan atau dihapus.
-Bisa membawa data terbaru berupa list item dan total harga.
-
-CartError
-Fungsi: Menandakan terjadi kesalahan saat memodifikasi keranjang, misal gagal menambah item karena stok habis.
-
-Bisa membawa pesan error agar UI menampilkan notifikasi.
+# Sebutkan dan jelaskan minimal tiga state yang mungkin digunakan dalam CartCubit beserta fungsinya.
+- CartInitial
+  Fungsi: Menandakan keranjang masih kosong atau belum ada interaksi.
+  Biasanya state awal saat Cubit dibuat.
+- CartUpdated
+  Fungsi: Menandakan isi keranjang berubah, misal ada item ditambahkan atau dihapus.
+  Bisa membawa data terbaru berupa list item dan total harga.
+- CartError
+  Fungsi: Menandakan terjadi kesalahan saat memodifikasi keranjang, misal gagal menambah item karena stok habis.
+  Bisa membawa pesan error agar UI menampilkan notifikasi.
